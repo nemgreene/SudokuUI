@@ -13,13 +13,15 @@ import { useSprings, animated } from "@react-spring/web";
 import SpringBoard from "./springBoard";
 import { exposeStart, exposeFinish } from "./utilityComponents/animObjects.jsx";
 import Button from "react-bootstrap/Button";
+import open from "./imgs/open.png";
+import closed from "./imgs/closed.png";
 
 import "./Beta.scss";
 
 const App = () => {
   // const isMounted = useRef(false);
   const [expand, cExpand] = useState(false);
-  const skip = false;
+  const [skip, cSkip] = useState(true);
   const [running, cRunning] = useState(false);
   const [completed, cCompleted] = useState(false);
   const [board1, cBoard1] = useState(emptyBoard);
@@ -61,6 +63,7 @@ const App = () => {
   };
 
   const solveItHandler = async () => {
+    cRunning(true);
     changeActiveButton([true, false, true]);
     cCompleted(false);
     await solveIt(
@@ -75,9 +78,11 @@ const App = () => {
       cCoords,
       cCompleted
     );
+    cRunning(false);
   };
 
   const stripItHandler = async () => {
+    cRunning(true);
     changeActiveButton([true, true, false]);
     cCompleted(false);
     stripIt(
@@ -178,9 +183,10 @@ const App = () => {
         <Button
           // disabled={running || expand}
           className="controlButtons btn-dark btn-outline-info"
-          onClick={() => cExpand((p) => !p)}
+          onClick={() => cSkip((p) => !p)}
+          disabled={running}
         >
-          Expand
+          <img className="eyeButton" src={!skip ? open : closed}></img>
         </Button>
       </div>
     </div>

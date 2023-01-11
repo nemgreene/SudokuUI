@@ -79,7 +79,7 @@ module.exports = {
       let temp = untether(board);
       temp[r[0]][r[1]] = " ";
       // if still solveable
-      let solveable = await solveItSkinny(100, temp, true);
+      let solveable = await solveItSkinny(20, temp, true);
       left = left.filter((p) => JSON.stringify(p) !== JSON.stringify(r));
 
       if (!skip && r) {
