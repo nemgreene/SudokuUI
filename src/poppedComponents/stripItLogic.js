@@ -128,6 +128,9 @@ module.exports = {
       //
     };
 
+    changeBoard2(untether(emptyBoard));
+    changeBoard3(untether(emptyBoard));
+
     cCompleted(false);
     changeRunning(true);
 

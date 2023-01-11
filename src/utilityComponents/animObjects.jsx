@@ -76,8 +76,8 @@ module.exports = {
     }),
     to: {
       color: "hotpink",
-      transform: `translate3d(${projection(-70).x}px, ${
-        projection(-70).y
+      transform: `translate3d(${projection(-40).x}px, ${
+        projection(-40).y
       }px, 0)`,
       border: "1px hotpink solid",
     },
