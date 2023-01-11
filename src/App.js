@@ -1,15 +1,15 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import {
   emptyBoard,
   projection,
   // board,
   filled,
-  unsolved,
 } from "./utilityComponents/misc.js";
 import { generate } from "./poppedComponents/generateLogic.js";
 import { solveIt } from "./poppedComponents/solveItLogic.js";
 import { stripIt } from "./poppedComponents/stripItLogic.js";
-import { useSprings, useSpring, animated, Globals } from "@react-spring/web";
+// import { useSprings, useSpring, animated, Globals } from "@react-spring/web";
+import { useSprings, animated } from "@react-spring/web";
 import SpringBoard from "./springBoard";
 import { exposeStart, exposeFinish } from "./utilityComponents/animObjects.jsx";
 import Button from "react-bootstrap/Button";
@@ -17,16 +17,15 @@ import Button from "react-bootstrap/Button";
 import "./Beta.scss";
 
 const App = () => {
-  const isMounted = useRef(false);
+  // const isMounted = useRef(false);
   const [expand, cExpand] = useState(false);
-  // const [skip, cSkip] = useState(false);
   const skip = false;
   const [running, cRunning] = useState(false);
   const [completed, cCompleted] = useState(false);
   const [board1, cBoard1] = useState(emptyBoard);
   const [board2, cBoard2] = useState(emptyBoard);
   const [board3, cBoard3] = useState(filled);
-  const [narration, changeNarration] = useState("Waiting...");
+  const [narration, changeNarration] = useState("");
   const [pointerIndex, changePointerIndex] = useState(0);
   const [coords, cCoords] = useState({
     c: { x: 0, y: 0 },
@@ -112,7 +111,7 @@ const App = () => {
         ? { ...exposeFinish(positions[index]) }
         : { ...exposeStart };
     });
-  }, [expand]);
+  }, [expand, boardApi, positions]);
 
   return (
     <div className="App-body">

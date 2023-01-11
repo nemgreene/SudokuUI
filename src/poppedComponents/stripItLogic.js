@@ -15,9 +15,6 @@ const {
 } = require("../utilityComponents/animObjects");
 // const { possibilities } = require("../utilityComponents/possibilities");
 const { solveItSkinny } = require("./solveItLogic");
-const { usePrev } = require("@react-spring/shared");
-let successColor = "#03fc2055";
-let failColor = "#fc200355";
 
 module.exports = {
   stripIt: async (
@@ -62,11 +59,27 @@ module.exports = {
           cCoords((p) => ({ ...p, b: { x: 0, y: 0, section: "board" } }));
           await wait(springDuration, "Board Completed", changeNarration);
           cCompleted(true);
+          await wait(mediumDuration, "Board Completed", changeNarration);
+          cCoords((p) => ({
+            ...p,
+            a: {
+              x: 0,
+              y: 0,
+              section: "board",
+              trans: { backgroundColor: "#282c3466" },
+            },
+          }));
         }
         changeRunning(false);
         changeBoard2(untether(emptyBoard));
         changeBoard3(untether(emptyBoard));
         return;
+        // cCoords((p) => ({
+        //   ...p,
+        //   a: { x: 0, y: 0, section: "board" },
+        //   trans: { to: { backgroundCOlor } },
+        // }));
+        // return;
       }
       // remove from board
       let temp = untether(board);

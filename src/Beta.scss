@@ -26,6 +26,7 @@
   min-height: 350px;
   min-width: 350px;
   padding: 0 !important;
+  position: relative;
 }
 
 .row {
@@ -118,7 +119,14 @@
   }
 }
 .waveContainer {
-  border-color: hotpink !important;
+  border: 10px solid hotpink !important;
+  top: 10%;
+  left: calc(10% - 7.5px);
+  right: calc(10% - 7.5px);
+  bottom: 0%;
+  border-width: 10px;
+  position: absolute;
+  z-index: 10;
 }
 
 .borderCell {
@@ -156,16 +164,4 @@
   justify-content: left;
   padding: 2%;
   align-items: center;
-}
-
-.waveContainer {
-  // height: 100%;
-  // width: 100%;
-  top: 10%;
-  left: calc(10% - 7.5px);
-  right: calc(10% - 7.5px);
-  z-index: 100;
-  bottom: 0%;
-  border: aqua 5px solid;
-  position: absolute;
 }
