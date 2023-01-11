@@ -46,8 +46,8 @@ module.exports = {
 
     // initial animations
     if (!skip) {
-      await wait(mediumDuration, "Initializing", changeNarration);
       cExpand(true);
+      await wait(mediumDuration, "Initializing", changeNarration);
 
       await wait(mediumDuration, "Initializing", changeNarration);
       cCoords((p) => ({ ...p, a: { x: sum, y: 0, section: "parallel" } }));

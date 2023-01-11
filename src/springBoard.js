@@ -43,13 +43,13 @@ function SpringBoard({
   useEffect(() => {
     const handler = (coordX, coordY, trans = {}, section = null) => {
       switch (section) {
-        // used to drop a whole board
+        // used to drop a whole row
         case "parallel":
           rowApi.start((index) => (coordX.includes(index) ? trans : null));
           break;
+        // used to drop a whole board
         case "board":
           rowApi.start((index) => trans);
-          // used to drop a whole row
           break;
         case "row":
           rowApi.start((index) =>
@@ -75,7 +75,6 @@ function SpringBoard({
           );
       }
     };
-
     if (isMounted.current) {
       handler(
         coords.x,
@@ -106,7 +105,7 @@ function SpringBoard({
         </div>
         {/* animated border effect */}
         {isBase ? (
-          <animated.div style={finalBorder} className="waveContainer" />
+          <animated.div style={{ ...finalBorder }} className="waveContainer" />
         ) : null}
         {/* animated narration */}
         {narration ? (
