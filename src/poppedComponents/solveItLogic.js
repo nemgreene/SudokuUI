@@ -92,7 +92,7 @@ module.exports = {
       //animation
       if (!skip) {
         await wait(
-          mediumDuration,
+          springDuration,
           "Found all cells with only one possibility",
           changeNarration
         );
@@ -103,7 +103,7 @@ module.exports = {
           a: { x: exposition, y: 0, trans: highFinish, section: "parallel" },
         }));
         await wait(
-          mediumDuration + springDuration,
+          springDuration,
           "Found all cells with only one possibility",
           changeNarration
         );
@@ -127,9 +127,10 @@ module.exports = {
             ...p,
             b: { x: exposition, y: 0, section: "board" },
           }));
-          await wait(mediumDuration, "Board completed", changeNarration);
+          await wait(springDuration, "Board completed", changeNarration);
           changeBoard3(untether(localBoard));
-          // cCompleted(true);
+          await wait(mediumDuration, "Board completed", changeNarration);
+          cCompleted(true);
         }
         // update board
         changeBoard(untether(localBoard));

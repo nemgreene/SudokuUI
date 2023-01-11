@@ -7,7 +7,10 @@ let {
   board,
 } = require("../utilityComponents/misc");
 
-const { springDuration } = require("../utilityComponents/animObjects");
+const {
+  springDuration,
+  mediumDuration,
+} = require("../utilityComponents/animObjects");
 const { possibilities } = require("../utilityComponents/possibilities");
 module.exports = {
   generate: async (
@@ -102,7 +105,7 @@ module.exports = {
             ...p,
             a: { x: x, y: alph.indexOf(y), section: "row" },
           }));
-
+          changePointerIndex(0);
           await wait(springDuration, "Board Completed", changeNarration);
           changeBoard2(untether(board));
           cCoords((p) => ({
@@ -115,15 +118,12 @@ module.exports = {
           // cCoords((p) => ({ ...p, c: { x: 0, y: 0, section: "board" } }));
           // await wait(springDuration, "Board Completed", changeNarration);
 
-          await wait(500, "Board Completed", changeNarration);
+          await wait(mediumDuration, "Board Completed", changeNarration);
           cCompleted(true);
-          changeBoard2(untether(emptyBoard));
-          changeBoard3(untether(emptyBoard));
 
           //reset position
         }
         changeRunning(false);
-        changeNarration("Board Complete");
         return;
       }
 

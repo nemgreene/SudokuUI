@@ -43,6 +43,7 @@ const App = () => {
 
   const generateHandler = () => {
     changeActiveButton([true, false, true]);
+    cCompleted(false);
     generate(
       running,
       // cBoard4,
@@ -61,6 +62,7 @@ const App = () => {
 
   const solveItHandler = async () => {
     changeActiveButton([true, false, true]);
+    cCompleted(false);
     await solveIt(
       50,
       board3,
@@ -77,6 +79,7 @@ const App = () => {
 
   const stripItHandler = async () => {
     changeActiveButton([true, true, false]);
+    cCompleted(false);
     stripIt(
       200,
       board3,
@@ -112,6 +115,10 @@ const App = () => {
         : { ...exposeStart };
     });
   }, [expand, boardApi, positions]);
+
+  // useEffect(() => {
+  //   cExpand(false);
+  // }, [running]);
 
   return (
     <div className="App-body">
