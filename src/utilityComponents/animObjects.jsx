@@ -46,6 +46,7 @@ module.exports = {
   stripItStamp: {
     config: { duration: this.springDuration },
     loop: () => ({
+      // hello this is updated
       backgroundColor: "#FF69B477",
       transform: "translate3d(0px,0px,0px)",
     }),
