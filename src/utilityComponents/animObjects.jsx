@@ -51,7 +51,8 @@ module.exports = {
       transform: "translate3d(0px,0px,0px)",
     }),
     to: {
-      backgroundColor: "#282c3400",
+      color: "red",
+      color: "hotpink",
       transform: `translate3d(${projection(110).x}px, ${
         projection(110).y
       }px, 0)`,

@@ -66,7 +66,7 @@ module.exports = {
               x: 0,
               y: 0,
               section: "board",
-              trans: { backgroundColor: "#282c3466" },
+              trans: { backgroundColor: "#282c3466", color: "aqua" },
             },
           }));
         }
