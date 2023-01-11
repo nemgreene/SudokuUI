@@ -74,18 +74,12 @@ module.exports = {
         changeBoard2(untether(emptyBoard));
         changeBoard3(untether(emptyBoard));
         return;
-        // cCoords((p) => ({
-        //   ...p,
-        //   a: { x: 0, y: 0, section: "board" },
-        //   trans: { to: { backgroundCOlor } },
-        // }));
-        // return;
       }
       // remove from board
       let temp = untether(board);
       temp[r[0]][r[1]] = " ";
       // if still solveable
-      let solveable = await solveItSkinny(10, temp, true);
+      let solveable = await solveItSkinny(100, temp, true);
       left = left.filter((p) => JSON.stringify(p) !== JSON.stringify(r));
 
       if (!skip && r) {
