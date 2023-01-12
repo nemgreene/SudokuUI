@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/sudokuUI/static/css/main.9d49426a.chunk.css",
+    "main.js": "/sudokuUI/static/js/main.0822aa32.chunk.js",
+    "main.js.map": "/sudokuUI/static/js/main.0822aa32.chunk.js.map",
+    "runtime-main.js": "/sudokuUI/static/js/runtime-main.5b70ab86.js",
+    "runtime-main.js.map": "/sudokuUI/static/js/runtime-main.5b70ab86.js.map",
+    "static/css/2.af3c1da9.chunk.css": "/sudokuUI/static/css/2.af3c1da9.chunk.css",
+    "static/js/2.f0a6ebd2.chunk.js": "/sudokuUI/static/js/2.f0a6ebd2.chunk.js",
+    "static/js/2.f0a6ebd2.chunk.js.map": "/sudokuUI/static/js/2.f0a6ebd2.chunk.js.map",
+    "index.html": "/sudokuUI/index.html",
+    "precache-manifest.64ae621c297b444f2ce2a85c3d4e90aa.js": "/sudokuUI/precache-manifest.64ae621c297b444f2ce2a85c3d4e90aa.js",
+    "service-worker.js": "/sudokuUI/service-worker.js",
+    "static/css/2.af3c1da9.chunk.css.map": "/sudokuUI/static/css/2.af3c1da9.chunk.css.map",
+    "static/css/main.9d49426a.chunk.css.map": "/sudokuUI/static/css/main.9d49426a.chunk.css.map",
+    "static/js/2.f0a6ebd2.chunk.js.LICENSE.txt": "/sudokuUI/static/js/2.f0a6ebd2.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5b70ab86.js",
+    "static/css/2.af3c1da9.chunk.css",
+    "static/js/2.f0a6ebd2.chunk.js",
+    "static/css/main.9d49426a.chunk.css",
+    "static/js/main.0822aa32.chunk.js"
+  ]
+}
