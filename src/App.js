@@ -21,7 +21,7 @@ import "./Beta.scss";
 const App = () => {
   // const isMounted = useRef(false);
   const [expand, cExpand] = useState(false);
-  const [skip, cSkip] = useState(true);
+  const [skip, cSkip] = useState(false);
   const [running, cRunning] = useState(false);
   const [completed, cCompleted] = useState(false);
   const [board1, cBoard1] = useState(emptyBoard);

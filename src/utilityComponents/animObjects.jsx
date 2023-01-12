@@ -3,7 +3,7 @@ const { projection } = require("./misc");
 
 export let springDuration = 300;
 export let mediumDuration = 500;
-export let snappyDuration = 50;
+export let snappyDuration = 100;
 export let stampStart = {
   config: {
     duration: springDuration,
@@ -34,7 +34,7 @@ export let stripItFloat = {
     transform: "translate3d(0px,0px,0px)",
   }),
   to: {
-    transform: `translate3d(${projection(-10).x}px, ${projection(-10).y}px, 0)`,
+    transform: `translate3d(${projection(-20).x}px, ${projection(-20).y}px, 0)`,
   },
 };
 export let stripItStamp = {
