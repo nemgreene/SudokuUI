@@ -1,0 +1,171 @@
+.App-body {
+  height: fit-content;
+  width: fit-content;
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: #282c34;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+.root {
+  overflow: hidden;
+}
+.hudOffset {
+  position: absolute;
+}
+
+.hudContainer {
+  height: 500px;
+  width: 500px;
+  max-height: 60vh;
+  max-width: 100vw;
+  min-height: 350px;
+  min-width: 350px;
+  padding: 0 !important;
+  position: relative;
+}
+
+.row {
+  height: 10%;
+  width: 100%;
+  margin: 0px;
+}
+.headerRow,
+.tableRow {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
+}
+.col {
+  font-size: 1rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding: 0;
+}
+
+.table td {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+.table thead th {
+  text-align: center;
+  border: none;
+}
+
+.animCell {
+  background-color: #282c34ad;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nthCell {
+  border: aqua solid 1px;
+}
+
+.hLines {
+  position: absolute;
+  z-index: 100;
+  top: 10%;
+  left: 36%;
+  right: 36%;
+  height: 90%;
+  border-width: 0px 3px 0px 3px;
+  border-style: solid;
+  border-color: hotpink;
+}
+.vLines {
+  position: absolute;
+  z-index: 100;
+  left: 9%;
+  top: calc(39% + 3px);
+  bottom: calc(29% + 3px);
+  width: 82%;
+  border-width: 3px 0px 3px 0px;
+  border-style: solid;
+  border-color: hotpink;
+}
+// .springboard3 {
+//   .nthCell:nth-child(3n + 1):nth-child(-n + 9) {
+//     // Styling for every third element here.
+//     border-right: red solid 1px !important;
+//   }
+//   .nthRow:nth-child(3n + 6):nth-child(-n + 9) {
+//     // Styling for every third element here.
+//     border-top: red solid 1px !important;
+//   }
+// }
+
+.hudOffset:nth-child(-n + 1) {
+  .ContainerRow {
+    // background-color: red;
+    // border: hotpink 1px solid !important;
+    .nthCell {
+      border-color: hotpink !important;
+      color: hotpink !important;
+    }
+    .borderCell {
+      color: hotpink !important;
+    }
+  }
+}
+.waveContainer {
+  border: 10px solid hotpink !important;
+  top: 10%;
+  left: calc(10% - 7.5px);
+  right: calc(10% - 7.5px);
+  bottom: 0%;
+  border-width: 10px;
+  position: absolute;
+  z-index: 10;
+}
+
+.borderCell {
+  border: none !important;
+  color: aqua;
+  text-align: center;
+}
+
+.controlButtons {
+  position: relative;
+  z-index: 100;
+}
+
+.narrationContainer {
+  color: hotpink;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  flex-wrap: nowrap;
+  display: flex;
+  flex-direction: row;
+  overflow: visible;
+}
+.narrationCol {
+  // background-color: #282c34;
+  // border: 1px solid hotpink;
+  // border-radius: 10px;
+  position: absolute;
+  // right: 0;
+  left: 95%;
+  width: 15vw;
+  margin-top: 10%;
+  height: 10%;
+  display: flex;
+  justify-content: left;
+  padding: 2%;
+  align-items: center;
+}
+
+.eyeButton {
+  height: 2vh;
+}

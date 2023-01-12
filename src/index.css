@@ -1,13 +1,248 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.App-body {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100vh;
+  background-color: #242424;
+  color: white;
+}
+.narration {
+  text-align: center;
+  color: antiquewhite;
+}
+.UI {
+  position: relative;
+  margin: auto;
+  margin-top: 25vh;
+  width: 50vh;
+  height: 55vh;
+}
+.container {
+  font-size: 2.78vh;
+  background-image: url(./sudoku-blankgrid.png);
+  background-repeat: no-repeat;
+  background-size: 40vh;
+  background-position: center;
+  position: relative;
+  height: 50vh;
+  width: 50vh;
+}
+.buttons {
+  align-content: center;
+  margin: 0 auto;
+  text-align: center;
+}
+.tableOffset {
+  padding-top: 1.9vh;
+  padding-left: 1.4vh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.headerCol {
+  text-align: center;
+  font-size: 2.78vh;
+}
+.col {
+  width: 100px;
+}
+/* ----------------------------Popped----------------------------- */
+
+.poppedUI {
+  position: relative;
+  margin: auto;
+  margin-top: 17.25vh;
+  width: 65vh;
+  height: 65vh;
+  font-size: 2.78vh;
+  opacity: 1;
+}
+.poppedTableOffset {
+  margin-left: -12%;
+  margin-right: -16%;
+  margin-top: -11%;
+}
+.anim {
+  position: absolute;
+}
+.animLayer1 {
+  z-index: 10;
+  position: absolute;
+  height: 105%;
+  color: aqua;
+  transform: skew(-30deg) scaleY(0.7);
+  margin-left: 20vh;
+  margin-top: 1.2vh;
+  height: 70%;
+  width: 100%;
+}
+.Layer1,
+.Layer2,
+.Layer3,
+.Layer4 {
+  position: absolute;
+  background-image: url(./sudoku-dark.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  height: 105%;
+  color: aqua;
+  transform: skew(-30deg) scaleY(0.7);
+  margin-left: 15%;
+  margin-top: -10%;
+  height: 70%;
+  width: 70%;
+  opacity: 0.5;
+}
+
+.Layer3 {
+  color: hotpink;
+}
+
+.animContainer {
+  z-index: 10;
+  position: absolute;
+}
+.animFrame {
+  background-image: url(./animFrame.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  transform: skew(-30deg) scaleY(0.7);
+  margin-top: -11.19vh;
+  margin-left: 4.95vh;
+  width: 55vh;
+  height: 55vh;
+  color: aqua;
+}
+
+.animStripIt1 {
+  background-size: 100% 100%;
+  position: absolute;
+  margin-top: -0.69vh;
+  margin-left: 1.85vh;
+  width: 44vh;
+  height: 44vh;
+  color: hotpink;
+}
+.animStripIt2 {
+  background-size: 100% 100%;
+  position: absolute;
+  margin-top: -0.69vh;
+  margin-left: 0.71vh;
+  width: 44.45vh;
+  height: 44vh;
+  color: hotpink;
+}
+.animFrameTable {
+  margin-left: 4.8vh;
+  margin-right: 4.7vh;
+}
+
+.activeLayer {
+  opacity: 1;
+}
+
+.numHeaderCol {
+  color: aqua;
+}
+.poppedColAlph {
+  color: aqua;
+}
+.poppedCol {
+  margin-top: 0.87vh;
+}
+.poppedButtons {
+  position: absolute;
+  float: left;
+  margin-left: 50vh;
+  margin-top: 2vh;
+}
+.btn-outline-info {
+  margin-left: 1vh;
+}
+.Layer1 {
+  position: absolute;
+  z-index: 4;
+}
+
+.Layer2 {
+  position: absolute;
+  z-index: 3;
+  background-image: url(./sudoku-dark.png);
+  background-repeat: no-repeat;
+  transform: skew(-30deg) scaleY(0.7);
+  margin-left: 15%;
+  margin-top: 6.7%;
+  height: 70%;
+  width: 70%;
+}
+
+.Layer3 {
+  position: absolute;
+  z-index: 2;
+  background-image: url(./sudoku-dark.png);
+  background-repeat: no-repeat;
+  transform: skew(-30deg) scaleY(0.7);
+  margin-left: 15%;
+  margin-top: 23.3%;
+  height: 70%;
+  width: 70%;
+}
+
+.Layer4 {
+  position: absolute;
+  z-index: 1;
+  background-image: url(./sudoku-dark.png);
+  background-repeat: no-repeat;
+  transform: skew(-30deg) scaleY(0.7);
+  margin-left: 15%;
+  margin-top: 39.9%;
+  height: 70%;
+  width: 70%;
+}
+
+/* ----------------------------Popped animation----------------------- */
+.stripItNarration {
+  color: hotpink;
+  margin-left: 48vh;
+  position: absolute;
+}
+.stripItCol2 {
+  margin-right: 0.99vh;
+}
+
+.poppedNarration {
+  margin-left: 47vh;
+  position: absolute;
+  text-align: left;
+  color: hotpink;
+}
+.animPoppedOffset {
+  margin-top: -45.2vh;
+  margin-left: 1.7vh;
+  margin-right: -1.6vh;
+}
+.animPoppedRow {
+  margin-top: -10vh;
+  color: hotpink;
+  float: left;
+  width: 104.9%;
+}
+
+.animPoppedRow2 {
+  margin-top: 0.87vh;
+  margin-right: -0vh;
+  width: 103.5%;
+}
+
+.animPoppedCol2 {
+  /* .3vh -  49.9*/
+  margin-right: 0.92vh;
+}
+
+.animPoppedCol {
+  /*   border: hotpink dotted 3px; */
+  margin-top: -0.2vh;
+  margin-right: 0.9vh;
 }
