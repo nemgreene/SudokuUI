@@ -127,8 +127,8 @@ export let stripIt = async (
   cCompleted(false);
   changeRunning(true);
 
-  await wait(mediumDuration, "Beginning removal", changeNarration);
   if (!skip) {
+    await wait(mediumDuration, "Beginning removal", changeNarration);
     cExpand(true);
   }
   recursion(l, board, left);

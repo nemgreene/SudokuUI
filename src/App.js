@@ -183,7 +183,10 @@ const App = () => {
         <Button
           // disabled={running || expand}
           className="controlButtons btn-dark btn-outline-info"
-          onClick={() => cSkip((p) => !p)}
+          onClick={() => {
+            changeNarration("");
+            cSkip((p) => !p);
+          }}
           disabled={running}
         >
           <img className="eyeButton" src={!skip ? open : closed}></img>
